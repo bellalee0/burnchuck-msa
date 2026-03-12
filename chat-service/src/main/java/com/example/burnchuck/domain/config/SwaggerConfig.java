@@ -12,8 +12,8 @@ public class SwaggerConfig {
     public OpenAPI openAPI() {
         return new OpenAPI()
             .info(new Info()
-                .title("Auth Service API")
-                .description("인증/인가 서비스 API 문서")
+                .title("Chat Service API")
+                .description("채팅 서비스 API 문서")
                 .version("v1.0.0"));
     }
 }
