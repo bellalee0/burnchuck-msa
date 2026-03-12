@@ -1,5 +1,6 @@
 package com.example.burnchuck.domain.user.event;
 
+import com.example.burnchuck.common.event.user.UserDeleteEvent;
 import lombok.RequiredArgsConstructor;
 import org.springframework.context.ApplicationEventPublisher;
 import org.springframework.stereotype.Service;
