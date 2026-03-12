@@ -1,0 +1,21 @@
+spring:
+  application:
+    name: burn-chuck
+  config:
+    import: optional:file:.env[.properties]
+  jpa:
+    open-in-view: false
+  jackson:
+    serialization:
+      write-dates-as-timestamps: false
+  swagger-ui:
+    tags-sorter: none
+    operations-sorter: none
+jwt:
+  secret:
+    key: ${JWT_SECRET_KEY}
+app:
+  frontend:
+    url: ${FRONTEND_URL}
+cors:
+  allowed-origins: ${CORS_ALLOWED_ORIGINS}
