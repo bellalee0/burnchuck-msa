@@ -1,91 +1,45 @@
 plugins {
     id 'java'
-    id 'org.springframework.boot' version '3.5.9'
-    id 'io.spring.dependency-management' version '1.1.7'
+    id 'org.springframework.boot' version '3.5.9' apply false
+    id 'io.spring.dependency-management' version '1.1.7' apply false
 }
 
-group = 'com.example'
-version = '0.0.1-SNAPSHOT'
-description = 'BurnChuck'
+// 모든 서브모듈 공통 설정
+subprojects {
+    apply plugin: 'java'
+    apply plugin: 'io.spring.dependency-management'
 
-java {
-    toolchain {
-        languageVersion = JavaLanguageVersion.of(17)
+    group = 'com.example'
+    version = '0.0.1-SNAPSHOT'
+
+    java {
+        toolchain {
+            languageVersion = JavaLanguageVersion.of(17)
+        }
     }
-}
 
-configurations {
-    compileOnly {
-        extendsFrom annotationProcessor
+    configurations {
+        compileOnly {
+            extendsFrom annotationProcessor
+        }
     }
-}
 
-repositories {
-    mavenCentral()
-}
+    repositories {
+        mavenCentral()
+    }
 
-dependencies {
-    implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
-    implementation 'org.springframework.boot:spring-boot-starter-web'
-    compileOnly 'org.projectlombok:lombok'
-    runtimeOnly 'com.mysql:mysql-connector-j'
-    annotationProcessor 'org.projectlombok:lombok'
-    testImplementation 'org.springframework.boot:spring-boot-starter-test'
-    testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+    dependencyManagement {
+        imports {
+            mavenBom "org.springframework.boot:spring-boot-dependencies:3.5.9"
+            mavenBom "software.amazon.awssdk:bom:2.35.0"
+        }
+    }
 
-    // Spring Security
-    implementation 'org.springframework.boot:spring-boot-starter-security'
-    implementation "io.jsonwebtoken:jjwt-api:0.12.5"
-    runtimeOnly  "io.jsonwebtoken:jjwt-impl:0.12.5"
-    runtimeOnly  "io.jsonwebtoken:jjwt-jackson:0.12.5"
-
-    // Validation
-    implementation 'org.springframework.boot:spring-boot-starter-validation'
-
-    // QueryDSL
-    implementation 'com.querydsl:querydsl-jpa:5.0.0:jakarta'
-    annotationProcessor "com.querydsl:querydsl-apt:5.0.0:jakarta"
-    annotationProcessor "jakarta.annotation:jakarta.annotation-api"
-    annotationProcessor "jakarta.persistence:jakarta.persistence-api"
-
-    // Swagger
-    implementation 'org.springdoc:springdoc-openapi-starter-webmvc-ui:2.8.4'
-
-    // CSV
-    implementation 'com.opencsv:opencsv:5.9'
-
-    // MongoDB
-    implementation 'org.springframework.boot:spring-boot-starter-data-mongodb'
-
-    // WebSocket + STOMP
-    implementation 'org.springframework.boot:spring-boot-starter-websocket'
-
-    // Spatial
-    implementation 'org.hibernate.orm:hibernate-spatial'
-    implementation 'com.querydsl:querydsl-spatial:5.0.0'
-
-    // Redis
-    implementation 'org.springframework.boot:spring-boot-starter-data-redis'
-    implementation 'com.fasterxml.jackson.datatype:jackson-datatype-jsr310'
-
-    // AWS S3
-    implementation(platform("software.amazon.awssdk:bom:2.35.0"))
-    implementation("software.amazon.awssdk:s3")
-
-    // Redisson
-    implementation 'org.redisson:redisson-spring-boot-starter:4.0.0'
-
-    // Email Service for Verification
-    implementation 'org.springframework.boot:spring-boot-starter-mail'
-
-    // Elasticsearch
-    implementation 'org.springframework.boot:spring-boot-starter-data-elasticsearch'
-
-    // CloudWatch
-    implementation 'org.springframework.boot:spring-boot-starter-actuator'
-    implementation 'io.micrometer:micrometer-registry-cloudwatch2'
-}
-
-tasks.named('test') {
-    useJUnitPlatform()
+    // 모든 모듈 공통 의존성
+    dependencies {
+        compileOnly 'org.projectlombok:lombok'
+        annotationProcessor 'org.projectlombok:lombok'
+        testImplementation 'org.springframework.boot:spring-boot-starter-test'
+        testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+    }
 }

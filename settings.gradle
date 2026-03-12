@@ -1,1 +1,11 @@
 rootProject.name = 'BurnChuck'
+
+include 'common'
+include 'api-gateway'
+include 'auth-service'
+include 'user-service'
+include 'meeting-service'
+include 'review-service'
+include 'chat-service'
+include 'notification-service'
+include 'batch-server'
