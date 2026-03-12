@@ -23,3 +23,6 @@ spring:
 logging:
   level:
     root: INFO
+
+server:
+  port: ${AUTH_SERVICE_PORT}
