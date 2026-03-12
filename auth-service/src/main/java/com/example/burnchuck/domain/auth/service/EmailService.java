@@ -4,7 +4,7 @@ import com.example.burnchuck.common.enums.ErrorCode;
 import com.example.burnchuck.common.exception.CustomException;
 import com.example.burnchuck.domain.auth.dto.request.EmailConfirmRequest;
 import com.example.burnchuck.domain.auth.dto.request.EmailRequest;
-import com.example.burnchuck.domain.user.repository.UserRepository;
+import com.example.burnchuck.domain.auth.repository.UserRepository;
 import jakarta.mail.MessagingException;
 import jakarta.mail.internet.MimeMessage;
 import lombok.RequiredArgsConstructor;

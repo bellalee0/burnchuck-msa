@@ -8,11 +8,7 @@ import org.springframework.data.jpa.repository.JpaRepository;
 
 public interface UserRefreshRepository extends JpaRepository<UserRefresh, Long> {
 
-    boolean existsByUserId(Long id);
-
     Optional<UserRefresh> findByUserId(Long userId);
-
-    void deleteByUserId(Long id);
 
     default UserRefresh findUserRefreshByUserId(Long userId) {
         return findByUserId(userId)

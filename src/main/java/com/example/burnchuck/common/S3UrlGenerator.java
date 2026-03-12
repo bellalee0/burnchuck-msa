@@ -1,4 +1,4 @@
-package com.example.burnchuck.common.utils;
+package com.example.burnchuck.common;
 
 import com.example.burnchuck.common.dto.S3UrlResponse;
 import com.example.burnchuck.common.enums.ErrorCode;
