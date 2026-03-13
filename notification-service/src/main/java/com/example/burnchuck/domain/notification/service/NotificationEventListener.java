@@ -3,6 +3,7 @@ package com.example.burnchuck.domain.notification.service;
 import com.example.burnchuck.common.enums.MeetingTaskType;
 import com.example.burnchuck.common.event.meeting.MeetingAttendeesChangeEvent;
 import com.example.burnchuck.common.event.meeting.MeetingEvent;
+import com.example.burnchuck.common.event.notification.CommentNotificationEvent;
 import com.example.burnchuck.common.event.user.UserDeleteEvent;
 import lombok.RequiredArgsConstructor;
 import org.springframework.context.event.EventListener;
@@ -36,6 +37,13 @@ public class NotificationEventListener {
     public void createMeetingMemberNotification(MeetingAttendeesChangeEvent event) {
 
         notificationService.notifyMeetingMember(event.getType(), event.getMeeting(), event.getUser());
+    }
+
+    @TransactionalEventListener(phase = TransactionPhase.AFTER_COMMIT)
+    @EventListener
+    public void createCommentNotification(CommentNotificationEvent event) {
+
+        notificationService.notifyCommentRequest(event.getMeeting());
     }
 
     @TransactionalEventListener(phase = TransactionPhase.AFTER_COMMIT)

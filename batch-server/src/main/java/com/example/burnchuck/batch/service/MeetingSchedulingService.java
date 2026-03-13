@@ -66,7 +66,6 @@ public class MeetingSchedulingService {
 
     /**
      * 알림 생성(후기 작성) 스케줄 생성 (모임 3시간 후)
-     * TODO: event listener 추가
      */
     public void scheduleNotification(Meeting meeting) {
 
