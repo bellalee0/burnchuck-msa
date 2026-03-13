@@ -223,7 +223,10 @@ public class ChatRoomService {
      * 모임 참가 취소 / 유저 탈퇴 시, 채팅방 나가기
      */
     @Transactional
-    public void leaveChatRoomRegardlessOfStatus(Long userId, Long roomId) {
+    public void leaveChatRoomRegardlessOfStatus(Long meetingId, Long userId) {
+
+        ChatRoom chatRoom = chatRoomRepository.findChatRoomByMeetingId(meetingId);
+        Long roomId = chatRoom.getId();
 
         ChatRoomUser chatRoomUser = chatRoomUserRepository.findChatRoomUserByChatRoomIdAndUserId(roomId, userId);
 

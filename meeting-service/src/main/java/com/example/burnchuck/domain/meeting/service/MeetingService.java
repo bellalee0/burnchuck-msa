@@ -74,7 +74,6 @@ public class MeetingService {
 
     /**
      * 모임 생성
-     * TODO: chatRoomService.createGroupChatRoom 이벤트 기반으로 변경
      */
     @Transactional
     public MeetingCreateResponse createMeeting(AuthUser authUser, MeetingCreateRequest request) {
@@ -112,7 +111,7 @@ public class MeetingService {
 
         userMeetingRepository.save(userMeeting);
 
-        meetingEventPublisher.publishMeetingCreatedEvent(meeting);
+        meetingEventPublisher.publishMeetingCreatedEvent(meeting, user);
 
         return MeetingCreateResponse.from(meeting);
     }

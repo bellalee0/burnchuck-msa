@@ -15,9 +15,9 @@ public class MeetingEventPublisher {
 
     private final ApplicationEventPublisher publisher;
 
-    public void publishMeetingCreatedEvent(Meeting meeting) {
+    public void publishMeetingCreatedEvent(Meeting meeting, User hostUser) {
 
-        MeetingEvent event = new MeetingEvent(MeetingTaskType.CREATE, meeting);
+        MeetingEvent event = new MeetingEvent(MeetingTaskType.CREATE, meeting, hostUser);
         publisher.publishEvent(event);
     }
 

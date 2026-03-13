@@ -32,7 +32,6 @@ public class AttendanceService {
 
     /**
      * 모임 참여 신청
-     * TODO: chatRoomService.joinGroupChatRoom 이벤트 기반으로 변경
      */
     @Transactional
     public void registerAttendance(AuthUser authUser, Long meetingId) {
@@ -69,7 +68,6 @@ public class AttendanceService {
 
     /**
      * 모임 참여 취소
-     * TODO: chatRoomService.leaveChatRoomRegardlessOfStatus 이벤트 기반으로 변경
      */
     @Transactional
     public void cancelAttendance(AuthUser authUser, Long meetingId) {
@@ -100,7 +98,6 @@ public class AttendanceService {
 
     /**
      * 유저 삭제 후, 참가 신청한 모임 취소 처리
-     * TODO: chatRoomService.leaveChatRoomRegardlessOfStatus 이벤트 기반으로 변경
      */
     @Transactional
     public void cancelAllAttendanceAfterDeleteUser(Long userId) {
