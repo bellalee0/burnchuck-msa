@@ -28,7 +28,7 @@ public class MeetingLikeEventListener {
         }
     }
 
-    @TransactionalEventListener(phase = TransactionPhase.BEFORE_COMMIT)
+    @TransactionalEventListener(phase = TransactionPhase.AFTER_COMMIT)
     @EventListener
     public void deletedUser(UserDeleteEvent event) {
 

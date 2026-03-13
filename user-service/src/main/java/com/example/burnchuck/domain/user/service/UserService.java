@@ -139,7 +139,6 @@ public class UserService {
 
     /**
      * 회원 탈퇴
-     * TODO: refresh 토큰, meetingLike, emitter 처리 추가 필요
      */
     @Transactional
     public void deleteUser(AuthUser authUser) {
