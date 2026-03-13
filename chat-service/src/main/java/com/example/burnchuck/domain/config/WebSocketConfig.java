@@ -1,7 +1,7 @@
 package com.example.burnchuck.domain.config;
 
-import com.example.burnchuck.common.handler.AuthHandshakeInterceptor;
-import com.example.burnchuck.common.handler.StompHandler;
+import com.example.burnchuck.domain.handler.AuthHandshakeInterceptor;
+import com.example.burnchuck.domain.handler.StompHandler;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Configuration;

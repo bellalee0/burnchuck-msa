@@ -1,4 +1,4 @@
-package com.example.burnchuck.common.handler;
+package com.example.burnchuck.domain.handler;
 
 import com.example.burnchuck.common.utils.JwtUtil;
 import jakarta.servlet.http.Cookie;

@@ -1,4 +1,4 @@
-package com.example.burnchuck.common.handler;
+package com.example.burnchuck.domain.handler;
 
 import com.example.burnchuck.common.dto.AuthUser;
 import com.example.burnchuck.common.enums.UserRole;

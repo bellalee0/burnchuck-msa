@@ -1,4 +1,4 @@
-package com.example.burnchuck.common.dto;
+package com.example.burnchuck.domain.meeting.dto;
 
 import lombok.*;
 

@@ -1,8 +1,8 @@
 package com.example.burnchuck.domain.user.util;
 
-import com.example.burnchuck.common.dto.S3UrlResponse;
 import com.example.burnchuck.common.enums.ErrorCode;
 import com.example.burnchuck.common.exception.CustomException;
+import com.example.burnchuck.domain.user.dto.S3UrlResponse;
 import java.time.Duration;
 import java.util.Set;
 import lombok.RequiredArgsConstructor;

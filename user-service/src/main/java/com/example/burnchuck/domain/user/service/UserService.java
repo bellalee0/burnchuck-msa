@@ -1,19 +1,19 @@
 package com.example.burnchuck.domain.user.service;
 
 import com.example.burnchuck.common.dto.AuthUser;
-import com.example.burnchuck.common.dto.S3UrlResponse;
 import com.example.burnchuck.common.entity.Address;
 import com.example.burnchuck.common.entity.User;
 import com.example.burnchuck.common.enums.ErrorCode;
+import com.example.burnchuck.common.event.user.UserEventPublisher;
 import com.example.burnchuck.common.exception.CustomException;
 import com.example.burnchuck.domain.follow.repository.FollowRepository;
+import com.example.burnchuck.domain.user.dto.S3UrlResponse;
 import com.example.burnchuck.domain.user.dto.request.UserUpdatePasswordRequest;
 import com.example.burnchuck.domain.user.dto.request.UserUpdateProfileRequest;
 import com.example.burnchuck.domain.user.dto.response.UserGetAddressResponse;
 import com.example.burnchuck.domain.user.dto.response.UserGetOneResponse;
 import com.example.burnchuck.domain.user.dto.response.UserGetProfileResponse;
 import com.example.burnchuck.domain.user.dto.response.UserUpdateProfileResponse;
-import com.example.burnchuck.common.event.user.UserEventPublisher;
 import com.example.burnchuck.domain.user.repository.AddressRepository;
 import com.example.burnchuck.domain.user.repository.ReviewRepository;
 import com.example.burnchuck.domain.user.repository.UserRepository;

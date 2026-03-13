@@ -1,6 +1,6 @@
 package com.example.burnchuck.domain.util;
 
-import com.example.burnchuck.common.dto.S3UrlResponse;
+import com.example.burnchuck.domain.meeting.dto.S3UrlResponse;
 import com.example.burnchuck.common.enums.ErrorCode;
 import com.example.burnchuck.common.exception.CustomException;
 import lombok.RequiredArgsConstructor;

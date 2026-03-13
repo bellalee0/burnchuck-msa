@@ -10,7 +10,7 @@ import static com.example.burnchuck.common.enums.SuccessMessage.MEETING_UPDATE_S
 
 import com.example.burnchuck.common.dto.AuthUser;
 import com.example.burnchuck.common.dto.CommonResponse;
-import com.example.burnchuck.common.dto.S3UrlResponse;
+import com.example.burnchuck.domain.meeting.dto.S3UrlResponse;
 import com.example.burnchuck.common.dto.PageResponse;
 import com.example.burnchuck.common.enums.MeetingSortOption;
 import com.example.burnchuck.domain.meeting.dto.request.LocationFilterRequest;

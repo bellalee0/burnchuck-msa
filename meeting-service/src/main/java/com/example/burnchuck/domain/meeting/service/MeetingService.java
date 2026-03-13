@@ -5,7 +5,7 @@ import static com.example.burnchuck.common.enums.ErrorCode.HOST_NOT_FOUND;
 import static com.example.burnchuck.common.enums.ErrorCode.MEETING_NOT_FOUND;
 
 import com.example.burnchuck.common.dto.AuthUser;
-import com.example.burnchuck.common.dto.S3UrlResponse;
+import com.example.burnchuck.domain.meeting.dto.S3UrlResponse;
 import com.example.burnchuck.common.entity.Category;
 import com.example.burnchuck.common.entity.Meeting;
 import com.example.burnchuck.common.entity.User;

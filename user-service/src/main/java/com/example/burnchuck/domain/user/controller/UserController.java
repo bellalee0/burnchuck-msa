@@ -2,16 +2,16 @@ package com.example.burnchuck.domain.user.controller;
 
 import static com.example.burnchuck.common.enums.SuccessMessage.USER_DELETE_SUCCESS;
 import static com.example.burnchuck.common.enums.SuccessMessage.USER_GET_ADDRESS_SUCCESS;
+import static com.example.burnchuck.common.enums.SuccessMessage.USER_GET_ONE_SUCCESS;
 import static com.example.burnchuck.common.enums.SuccessMessage.USER_GET_PROFILE_SUCCESS;
 import static com.example.burnchuck.common.enums.SuccessMessage.USER_UPDATE_PASSWORD_SUCCESS;
 import static com.example.burnchuck.common.enums.SuccessMessage.USER_UPDATE_PROFILE_IMG_SUCCESS;
 import static com.example.burnchuck.common.enums.SuccessMessage.USER_UPDATE_PROFILE_SUCCESS;
 import static com.example.burnchuck.common.enums.SuccessMessage.USER_UPLOAD_PROFILE_IMG_LINK_SUCCESS;
-import static com.example.burnchuck.common.enums.SuccessMessage.USER_GET_ONE_SUCCESS;
 
 import com.example.burnchuck.common.dto.AuthUser;
 import com.example.burnchuck.common.dto.CommonResponse;
-import com.example.burnchuck.common.dto.S3UrlResponse;
+import com.example.burnchuck.domain.user.dto.S3UrlResponse;
 import com.example.burnchuck.domain.user.dto.request.UserUpdatePasswordRequest;
 import com.example.burnchuck.domain.user.dto.request.UserUpdateProfileRequest;
 import com.example.burnchuck.domain.user.dto.response.UserGetAddressResponse;
