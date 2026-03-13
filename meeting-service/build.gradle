@@ -3,20 +3,13 @@ apply plugin: 'org.springframework.boot'
 dependencies {
     implementation project(':common')
 
-    implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
-    implementation 'org.springframework.boot:spring-boot-starter-web'
-    implementation 'org.springframework.boot:spring-boot-starter-security'
     implementation 'org.springframework.boot:spring-boot-starter-data-redis'
     implementation 'org.springframework.boot:spring-boot-starter-data-elasticsearch'
     implementation 'org.redisson:redisson-spring-boot-starter:4.0.0'
-    implementation 'software.amazon.awssdk:s3'
 
     // Spatial
     implementation 'com.querydsl:querydsl-spatial:5.0.0'
 
     // AWS S3
-    implementation(platform("software.amazon.awssdk:bom:2.35.0"))
     implementation 'software.amazon.awssdk:s3'
-
-    runtimeOnly 'com.mysql:mysql-connector-j'
 }
