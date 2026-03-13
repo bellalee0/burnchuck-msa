@@ -1,6 +1,6 @@
 spring:
   application:
-    name: burn-chuck
+    name: meeting-service
   config:
     import: optional:file:.env[.properties]
   jpa:
