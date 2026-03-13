@@ -11,7 +11,7 @@ import com.example.burnchuck.domain.meeting.repository.MeetingRepository;
 import com.example.burnchuck.domain.meeting.repository.UserRepository;
 import com.example.burnchuck.domain.meetingLike.dto.response.MeetingLikeCountResponse;
 import com.example.burnchuck.domain.meetingLike.dto.response.MeetingLikeResponse;
-import com.example.burnchuck.domain.meetingLike.event.MeetingLikeEventPublisher;
+import com.example.burnchuck.common.event.meetingLike.MeetingLikeEventPublisher;
 import com.example.burnchuck.domain.meetingLike.repository.MeetingLikeRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;

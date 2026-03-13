@@ -1,0 +1,23 @@
+package com.example.burnchuck.batch.dto;
+
+import java.util.function.Consumer;
+import lombok.RequiredArgsConstructor;
+import org.springframework.transaction.support.TransactionTemplate;
+
+@RequiredArgsConstructor
+public class SchedulingTask<T> implements Runnable {
+
+    private final T target;
+    private final Consumer<T> task;
+    private final TransactionTemplate transactionTemplate;
+
+    @Override
+    public void run() {
+        transactionTemplate.execute(
+            status -> {
+                task.accept(target);
+                return null;
+            }
+        );
+    }
+}

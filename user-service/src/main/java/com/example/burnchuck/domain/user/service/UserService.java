@@ -13,7 +13,7 @@ import com.example.burnchuck.domain.user.dto.response.UserGetAddressResponse;
 import com.example.burnchuck.domain.user.dto.response.UserGetOneResponse;
 import com.example.burnchuck.domain.user.dto.response.UserGetProfileResponse;
 import com.example.burnchuck.domain.user.dto.response.UserUpdateProfileResponse;
-import com.example.burnchuck.domain.user.event.UserEventPublisher;
+import com.example.burnchuck.common.event.user.UserEventPublisher;
 import com.example.burnchuck.domain.user.repository.AddressRepository;
 import com.example.burnchuck.domain.user.repository.ReviewRepository;
 import com.example.burnchuck.domain.user.repository.UserRepository;
