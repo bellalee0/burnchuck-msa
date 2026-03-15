@@ -29,5 +29,8 @@ logging:
   level:
     root: INFO
 
+  kafka:
+    bootstrap-servers: ${KAFKA_SERVERS}
+
 server:
   port: ${NOTIFICATION_SERVICE_PORT}

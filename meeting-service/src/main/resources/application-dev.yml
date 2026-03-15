@@ -28,6 +28,9 @@ spring:
   elasticsearch:
     uris: ${ELASTICSEARCH_URIS}
 
+  kafka:
+    bootstrap-servers: ${KAFKA_SERVERS}
+
 logging:
   level:
     root: INFO
